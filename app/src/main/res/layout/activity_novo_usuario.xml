@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.NovoUsuarioActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hoffs" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_trocar_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Trocar foto"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view_profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_cadeado"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_lock_24" />
+
+        <TextView
+            android:id="@+id/texto_cadeado"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="-40dp"
+            android:text="Dados para autenticação"
+            android:textSize="17sp"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_pessoa"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/texto_dados"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="-43dp"
+            android:text="Dados para autenticação"
+            android:textSize="17sp"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cl_header_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Nome"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/et_profissao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Profissão"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Altura"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/et_data_nascimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Data de nascimento"
+        android:inputType="textPersonName" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Sexo"
+        android:textSize="19dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_feminino"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:hint="Feminino"
+            android:textSize="19dp"
+            android:layout_marginTop="-7dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_masculino"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:hint="Masculino"
+            android:textSize="19dp"
+            android:layout_marginTop="-6dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_gravar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gravar" />
+
+        <TextView
+            android:id="@+id/tv_titulo_novo_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="end"
+            android:text="Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hoffs"
+            app:layout_editor_absoluteX="363dp"
+            app:layout_editor_absoluteY="9dp"
+            app:srcCompat="@android:drawable/ic_menu_save"
+            tools:ignore="MissingConstraints" />
+
+</LinearLayout>
